@@ -5,7 +5,6 @@ description = "Reproduction of an issue where explode is not passed through when
 authors = ["David Asabina <vid@bina.me>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "repro_sanic_openapi_parameter_explode"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
