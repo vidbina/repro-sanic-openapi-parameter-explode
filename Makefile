@@ -5,6 +5,14 @@ RM ?= rm -rf
 
 DOCKER_IMAGE = repro-sanic-openapi-parameter-explode
 
+.PHONY: all
+all:
+	$(DOCKER) run -it --rm \
+		-u $(shell id -u):$(shell id -g) \
+		-v $(realpath .):/tmp/repro \
+		--net=host \
+		$(DOCKER_IMAGE)
+
 .PHONY: image/dev
 image/dev: Dockerfile
 	$(DOCKER) build --rm --tag=$(DOCKER_IMAGE):dev --target=dev .
@@ -24,13 +32,6 @@ bash:
 		-w /tmp/target \
 		$(DOCKER_IMAGE):dev
 
-.PHONY: all
-all:
-	$(DOCKER) run -it --rm \
-		-u $(shell id -u):$(shell id -g) \
-		-v $(realpath .):/tmp/repro \
-		--net=host \
-		$(DOCKER_IMAGE)
-
+.PHONY: clean
 clean:
 	$(RM) .homedir/.cache
