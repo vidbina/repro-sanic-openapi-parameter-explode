@@ -9,6 +9,8 @@ packages = [{include = "repro_sanic_openapi_parameter_explode"}]
 
 [tool.poetry.dependencies]
 python = "~3.10"
+sanic = "^23.3.0"
+sanic-ext = "^23.3.0"
 
 
 [build-system]
