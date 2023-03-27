@@ -11,6 +11,9 @@ packages = [{include = "repro_pytype_import_error_pydantic"}]
 python = "~3.10"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
