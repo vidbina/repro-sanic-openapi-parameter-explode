@@ -13,6 +13,11 @@ sanic = "^23.3.0"
 sanic-ext = "^23.3.0"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+ruff = "^0.0.259"
+pytype = "^2023.3.13"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
