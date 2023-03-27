@@ -29,7 +29,8 @@ all:
 	$(DOCKER) run -it --rm \
 		-u $(shell id -u):$(shell id -g) \
 		-v $(realpath .):/tmp/repro \
-		--net=host
+		--net=host \
+		$(DOCKER_IMAGE)
 
 clean:
 	$(RM) .homedir/.cache
