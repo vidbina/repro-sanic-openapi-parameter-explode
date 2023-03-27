@@ -22,6 +22,6 @@ WORKDIR /tmp/repro
 
 COPY . /tmp/repro
 
-RUN poetry add pydantic pytype
+RUN poetry install
 
-CMD ["poetry", "run", "python", "/tmp/repro/example.py"]
+CMD ["poetry", "run", "sanic", "example.api", "--debug", "--reload"]
