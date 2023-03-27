@@ -82,6 +82,6 @@ The resulting JSON OpenAPI output is lacking the `explode` field:
 
 While the example in https://github.com/sanic-org/sanic-ext/blob/0b2d2af6ee57a73941a1b5e44712cb7b76f6a6aa/tests/extensions/openapi/static/petstore.json#L179 lists the explode field as valid OpenAPI (in this particular case).
 
-# Related Issues
+# Related Links
 
-- https://discord.com/channels/812221182594121728/812221182594121731/1089874204767293480
+- Exchange on discord with one of the Sanic core contributors https://discord.com/channels/812221182594121728/812221182594121731/1089874204767293480
